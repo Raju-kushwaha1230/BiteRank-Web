@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BiteRank | The Premium Social Network for Food Enthusiasts</title>
+    <meta name="description" content="Review restaurants, post immersive stories, and discover food with BiteRank. The ultimate social app for food lovers." />
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  </head>
+  <body>
+    <!-- Noise Texture Overlay -->
+    <div class="noise"></div>
+    <!-- Background Glows -->
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+    <nav id="navbar">
+      <div class="container nav-content">
+        <a href="#" class="logo">
+          <img src="/assets/logo.png" alt="BiteRank" width="32" height="32" style="border-radius: 8px;">
+          <span>BiteRank</span>
+        </a>
+        <div class="nav-links">
+          <a href="/BiteRank.apk" download="BiteRank.apk" class="btn btn-primary">Download APK</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero" id="home">
+        <div class="container">
+          <div class="hero-grid" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center;">
+            <div class="hero-content">
+              <h1 class="gradient-text" style="font-size: 4.5rem; line-height: 1.1; margin-bottom: 1.5rem;">
+                Every Meal is a <br>Story Worth Sharing.
+              </h1>
+              <p style="font-size: 1.25rem; color: var(--text-dim); margin-bottom: 2.5rem; max-width: 500px;">
+                Join the premium social network built for food enthusiasts. Review, rank, and post immersive "Bites" of your culinary journey.
+              </p>
+              <div class="hero-btns" style="display: flex; gap: 1rem;">
+                <a href="/BiteRank.apk" download="BiteRank.apk" class="btn btn-primary">Download APK</a>
+                <a href="#features" class="btn btn-glass">Explore Features</a>
+              </div>
+            </div>
+            <div class="hero-image-wrapper">
+              <div class="glass floating" id="hero-phone" style="padding: 1rem; position: relative; transform: rotate(2deg);">
+                <img src="/assets/hero.png" alt="BiteRank App Feed" style="width: 100%; border-radius: 16px; display: block;">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section id="features" class="features">
+        <div class="container">
+          <div style="text-align: center; margin-bottom: 5rem;">
+            <h2 style="font-size: 3rem; margin-bottom: 1rem;">Unrivaled Experience</h2>
+            <p style="color: var(--text-dim);">Designed from the ground up for foodies, by foodies.</p>
+          </div>
+
+          <div class="feature-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+            <!-- Feat 1 -->
+            <div class="glass glass-hover reveal" style="padding: 2.5rem;">
+              <div style="font-size: 2.5rem; margin-bottom: 1.5rem;">📸</div>
+              <h3 style="margin-bottom: 1rem;">Immersive Bite Feed</h3>
+              <p style="color: var(--text-dim);">Scroll through high-rank food posts in an ultra-clean, glassmorphism-inspired UI that puts the focus on the food.</p>
+            </div>
+            <!-- Feat 2 -->
+            <div class="glass glass-hover reveal" style="padding: 2.5rem;">
+              <div style="font-size: 2.5rem; margin-bottom: 1.5rem;">✨</div>
+              <h3 style="margin-bottom: 1rem;">15-Second Bites</h3>
+              <p style="color: var(--text-dim);">Share your dining experience with Instagram-style stories. Features native swipe-gestures to skip and pause.</p>
+            </div>
+            <!-- Feat 3 -->
+            <div class="glass glass-hover reveal" style="padding: 2.5rem;">
+              <div style="font-size: 2.5rem; margin-bottom: 1.5rem;">📍</div>
+              <h3 style="margin-bottom: 1rem;">Intelligent Geotagging</h3>
+              <p style="color: var(--text-dim);">Automatically find and tag restaurants using advanced reverse-geocoding. Never forget where you ate again.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stories Showcase -->
+      <section class="stories-showcase" style="background: rgba(61, 155, 107, 0.05); position: relative; overflow: hidden; padding: 8rem 0;">
+        <div class="container">
+          <div class="hero-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;">
+            <div class="glass floating" id="stories-phone" style="padding: 1.5rem; max-width: 420px; margin: 0 auto; box-shadow: 0 40px 100px rgba(0,0,0,0.6);">
+              <img src="/assets/stories.png" alt="Bite Creator Studio" style="width: 100%; border-radius: 20px;">
+            </div>
+            <div class="reveal">
+              <span style="color: var(--primary); font-weight: 800; text-transform: uppercase; letter-spacing: 0.2em; display: block; margin-bottom: 1rem;">Creator Studio</span>
+              <h2 style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem;">Craft the Perfect <br><span class="gradient-text">Bite Story</span></h2>
+              <p style="font-size: 1.15rem; color: var(--text-dim); margin-bottom: 2rem; line-height: 1.8;">
+                Our built-in canvas mimics high-end content pipelines. Add multiple image layers, native audio trims, and draggable text overlays before sharing your meal with the world.
+              </p>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; color: var(--text-main);">
+                <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; opacity: 0.8;"><span>✨</span> Audio Trims</div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; opacity: 0.8;"><span>🎨</span> Text Overlays</div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; opacity: 0.8;"><span>☁️</span> Cloud Uploads</div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; opacity: 0.8;"><span>📸</span> 5 Image Support</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Geotagging Section -->
+      <section class="geotag" style="padding: 8rem 0;">
+        <div class="container">
+          <div class="hero-grid" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 6rem; align-items: center;">
+            <div class="reveal">
+              <span style="color: var(--primary); font-weight: 800; text-transform: uppercase; letter-spacing: 0.2em; display: block; margin-bottom: 1rem;">Intelligence</span>
+              <h2 style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem;">Never Forget <br>A <span class="gradient-text">Restaurant</span></h2>
+              <p style="font-size: 1.15rem; color: var(--text-dim); margin-bottom: 2rem; line-height: 1.8;">
+                BiteRank natively interfaces with your phone's location services to automatically reverse-geocode your coordinates into verified physical street addresses.
+              </p>
+              <div class="glass" style="padding: 1.5rem; display: flex; align-items: center; gap: 1.2rem; background: rgba(61, 155, 107, 0.1);">
+                <div style="width: 60px; height: 60px; background: var(--primary); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">📍</div>
+                <div>
+                  <h4 style="margin-bottom: 0.2rem; font-size: 1.2rem;">The Golden Palate</h4>
+                  <p style="font-size: 0.9rem; opacity: 0.7;">Verified Restaurant Location</p>
+                </div>
+              </div>
+            </div>
+            <div class="glass floating" id="geotag-phone" style="padding: 1.5rem; box-shadow: 0 40px 100px rgba(0,0,0,0.6);">
+              <img src="/assets/geotag.png" alt="Geotagging Feature" style="width: 100%; border-radius: 20px;">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Download Section -->
+      <section id="download" style="text-align: center;">
+        <div class="container">
+          <div class="glass" style="padding: 5rem 2rem; background: linear-gradient(135deg, rgba(61, 155, 107, 0.2) 0%, rgba(10, 10, 10, 1) 100%);">
+            <h2 style="font-size: 4rem; margin-bottom: 1.5rem;">Ready to take a <span class="gradient-text">Bite</span>?</h2>
+            <p style="color: var(--text-dim); margin-bottom: 3rem; font-size: 1.2rem;">Download the latest APK and join the most exclusive food network.</p>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
+              <a href="/BiteRank.apk" download="BiteRank.apk" class="btn btn-primary" style="padding: 1.5rem 4rem; font-size: 1.2rem;">Download BiteRank.apk</a>
+              <p style="font-size: 0.9rem; opacity: 0.5;">Version 1.0.4 • 84MB • Android 10+</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer style="padding: 4rem 0; text-align: center; border-top: 1px solid var(--glass-border);">
+      <div class="container">
+        <a href="#" class="logo" style="justify-content: center; margin-bottom: 1rem;">BiteRank</a>
+        <p style="color: var(--text-dim); font-size: 0.9rem;">&copy; 2024 BiteRank Inc. Built for food enthusiasts.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
