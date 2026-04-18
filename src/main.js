@@ -21,9 +21,11 @@ heroTl.from('.hero-content h1', { opacity: 0, y: 50, delay: 0.5 })
       .from('.hero-btns', { opacity: 0, y: 20 }, '-=1.1')
       .from('#hero-phone', { opacity: 0, x: 100, rotate: 15, scale: 0.8 }, '-=1.5');
 
-// 2. Parallax Effects
+// 2. Parallax Effects (Optimized for Mobile)
+const isMobile = window.innerWidth < 768;
+
 gsap.to('#hero-phone', {
-  y: -100,
+  y: isMobile ? -30 : -100,
   scrollTrigger: {
     trigger: '.hero',
     start: 'top top',
@@ -33,7 +35,7 @@ gsap.to('#hero-phone', {
 });
 
 gsap.to('#stories-phone', {
-  y: -50,
+  y: isMobile ? -20 : -50,
   scrollTrigger: {
     trigger: '.stories-showcase',
     start: 'top bottom',
@@ -43,8 +45,8 @@ gsap.to('#stories-phone', {
 });
 
 gsap.to('#geotag-phone', {
-  y: -80,
-  rotate: -5,
+  y: isMobile ? -30 : -80,
+  rotate: isMobile ? -2 : -5,
   scrollTrigger: {
     trigger: '.geotag',
     start: 'top bottom',

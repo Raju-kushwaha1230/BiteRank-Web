@@ -18,12 +18,14 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   background-color: var(--bg-dark);
   color: var(--text-main);
   font-family: var(--font-main);
   line-height: 1.6;
   overflow-x: hidden;
+  width: 100%;
+  position: relative;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -40,27 +42,27 @@ body {
   background: url('https://grainy-gradients.vercel.app/noise.svg');
 }
 
-/* Background Glows */
 .bg-glow {
   position: fixed;
-  width: 600px;
-  height: 600px;
+  width: 40vw;
+  height: 40vw;
   border-radius: 50%;
-  filter: blur(150px);
+  filter: blur(100px);
   z-index: -1;
   opacity: 0.15;
+  pointer-events: none;
 }
 
 .glow-1 {
   background: var(--primary);
-  top: -200px;
-  right: -200px;
+  top: -10vw;
+  right: -10vw;
 }
 
 .glow-2 {
   background: #2a6d4e;
-  bottom: -200px;
-  left: -200px;
+  bottom: -10vw;
+  left: -10vw;
 }
 
 /* Glassmorphism v2 */
@@ -255,43 +257,71 @@ nav.scrolled {
   .hero-grid, .feature-grid {
     grid-template-columns: 1fr !important;
     text-align: center;
-    gap: 2rem !important;
+    gap: 3rem !important;
   }
 
-  .hero-content h1 {
+  .nav-content {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    display: none; /* Hide standard links to prioritize logo/minimalism */
+  }
+
+  .gradient-text {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+  }
+
+  h1.gradient-text {
     font-size: 3rem !important;
+    line-height: 1.1;
   }
 
   .hero-btns {
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 
   .hero-image-wrapper {
-    max-width: 300px;
-    margin: 0 auto;
+    max-width: 280px;
+    margin: 2rem auto 0;
   }
 
   section {
-    padding: 6rem 0;
+    padding: 4rem 1rem;
   }
 
-  .stories-showcase .hero-grid {
+  .stories-showcase .hero-grid,
+  .geotag .hero-grid {
     display: flex !important;
     flex-direction: column-reverse;
+    gap: 3rem !important;
   }
 }
 
 @media (max-width: 480px) {
-  .container {
-    padding: 0 1.5rem;
+  h1.gradient-text {
+    font-size: 2.5rem !important;
   }
 
-  .hero-content h1 {
-    font-size: 2.5rem !important;
+  h2 {
+    font-size: 2rem !important;
+  }
+
+  .container {
+    padding: 0 1.25rem;
   }
 
   .btn {
     width: 100%;
     justify-content: center;
+    padding: 1.2rem;
+  }
+  
+  .glass {
+    border-radius: 24px;
+    padding: 1.5rem !important;
   }
 }
